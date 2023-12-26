@@ -1,0 +1,187 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Outside.master.cs" Inherits="NewTest.COMMON.Outside" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+
+    <link href="../CSS/bootstrap-grid.css" rel="stylesheet" />
+    <link href="../CSS/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="../CSS/bootstrap.css" rel="stylesheet" />
+    <link href="../CSS/bootstrap.min.css" rel="stylesheet" />
+    <script src="../JS/bootstrap.bundle.js"></script>
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+    <script src="../JS/bootstrap.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <link href="../CSS/style.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg  fixed-top">
+                <a class="navbar-brand" href="#">
+                    <img class="logo" src="../Image/college-campus.jpg" alt="">
+                    <h5>School-Social</h5>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../Home.aspx">Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../About.aspx">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Services.aspx">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact us</a>
+                        </li>
+                    </ul>
+
+                    <div class="justify-content-between align-items-center">
+                        <%-- <form class="form-inline" action="#">--%>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal"
+                            data-target="#myRegistration">
+                            Registration</button>
+                        <button type="button" class="btn btn-outline-primary" data-toggle="modal"
+                            data-target="#myModal">
+                            Login</button>
+                        
+                        <%-- </form>--%>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title ">Login Form</h4>
+
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="container1">
+                                <%--<form action="#">--%>
+                                    <div class="form-group">
+                                        <label>Username:</label>                                        
+                                        <asp:TextBox ID="txtUsername" runat="server" Text="sar"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Req" ForeColor="Red" ControlToValidate="txtUsername"></asp:RequiredFieldValidator>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password:</label>
+                                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Req" ForeColor="Red" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
+                                    </div>
+                               <%-- </form>--%>
+                            </div>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <asp:Button ID="Button1" CssClass="btn btn-secondary" runat="server" Text="Login" />
+                           <%-- <button type="button" class="" data-dismiss="modal">Login</button>--%>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal modal1 fade" id="myRegistration">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title ">Registration Form</h4>
+
+                        </div>
+                        <!-- Modal body -->
+                        <div class="container1">
+                            <%-- <form action="#">--%>
+                            <div class="form-group">
+                                <label for="fullname">Full Name:</label>
+                                <input type="text" id="fullname" name="fullname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone:</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="program">Course:</label>
+                                <select id="program" name="program">
+                                    <option value="computer-science">Computer Science</option>
+                                    <option value="biology">Biology</option>
+                                    <option value="engineering">Engineering</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="state">State:</label>
+                                <select id="state" name="program">
+                                    <option value="mh">Maharastra</option>
+                                    <option value="goa">Goa</option>
+                                    <option value="guj">Gujrat</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="district">District:</label>
+                                <select id="district" name="program">
+                                    <option value="15">Nashik</option>
+                                    <option value="18">Chandwad</option>
+                                    <option value="any">other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pincode">Pincode:</label>
+                                <input type="text" id="pincode" name="pincode" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Local Address:</label>
+                                <textarea id="message" name="message"></textarea>
+                            </div>
+                            <!-- <button type="submit">Submit</button>
+          <button onclick="location.href='Home.html'">Back</button> -->
+                            <%-- </form>--%>
+                        </div>
+
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Register</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <asp:ContentPlaceHolder ID="BodyContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
