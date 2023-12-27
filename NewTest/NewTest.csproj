@@ -74,6 +74,7 @@
     <Content Include="CSS\bootstrap.min.css" />
     <Content Include="CSS\model.css" />
     <Content Include="CSS\style.css" />
+    <Content Include="Dashboard.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Image\college-campus.jpg" />
     <Content Include="Image\college-campus1.jpg" />
@@ -106,6 +107,12 @@
     </Compile>
     <Compile Include="COMMON\Outside.Master.designer.cs">
       <DependentUpon>Outside.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
