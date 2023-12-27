@@ -84,6 +84,7 @@
     <Content Include="JS\bootstrap.bundle.min.js" />
     <Content Include="JS\bootstrap.js" />
     <Content Include="JS\bootstrap.min.js" />
+    <Content Include="News.aspx" />
     <Content Include="Services.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -97,6 +98,7 @@
     </Compile>
     <Compile Include="COMMON\Inner.Master.cs">
       <DependentUpon>Inner.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="COMMON\Inner.Master.designer.cs">
       <DependentUpon>Inner.Master</DependentUpon>
@@ -110,6 +112,7 @@
     </Compile>
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
@@ -120,6 +123,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services.aspx.cs">
