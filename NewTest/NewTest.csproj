@@ -94,6 +94,12 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
+    <Compile Include="COMMON\Inner.Master.cs">
+      <DependentUpon>Inner.Master</DependentUpon>
+    </Compile>
+    <Compile Include="COMMON\Inner.Master.designer.cs">
+      <DependentUpon>Inner.Master</DependentUpon>
+    </Compile>
     <Compile Include="COMMON\Outside.Master.cs">
       <DependentUpon>Outside.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -119,6 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="COMMON\Outside.Master" />
+    <Content Include="COMMON\Inner.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
