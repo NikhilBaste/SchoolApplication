@@ -1,175 +1,134 @@
-button {
-  margin-left: 20px;
+
+* {
+    margin: 0%;
+    padding: 0%;
 }
 
-.btn {
-  background-color: rgb(103, 211, 103);
+body {
+    background-color: #eed9d6;
 }
 
-.navbar-toggler {
-  background-color: beige;
-}
-  
-
-.navbar-nav  a {
-    color: white;
-    transition: 0.1s;
-    text-align: center;
-    
-  }
-  .navbar-nav a:hover {
-    text-decoration: underline;
-    font-weight: bolder;
-    opacity: 0.5;
-  }
-  
-   .navbar-nav a {
-    background-color: black;
-    border-radius: 5px;
-    margin: 10px;
-    color: white;
-    opacity: 1;
+.navbar {
+    border: 2px solid red;
 }
 
-  .carousel-caption{
-    margin-bottom: 20px;
-    font-weight: bolder;
-    color: black;
-  }
-  .jumbotron {
-    margin: 10px;
-    padding: 20px;
-  }
-  .navbar {
-   
-    background: transparent;
-  }
-  .navbar-brand {
-    
+.navbar-brand {
     display: flex;
     align-items: center;
-    
-  }
+}
 
-  .navbar-brand h5 {
-    color: aquamarine;
-    margin-left: 10px;
-    margin-top: 8px;
-    
-  }
-  
-  .navbar-nav {
+
+    .navbar-brand h5 {
+        color: aquamarine;
+        margin-left: 10px;
+        margin-top: 8px;
+    }
+
+.navbar-nav {
     margin: auto;
-  }
+}
 
-  .logo {
-    width: 50px;
-    border-radius: 50px;
-  }
+    .navbar-nav a {
+        background-color: black;
+        border-radius: 5px;
+        margin: 10px;
+        color: white;
+        opacity: 1;
+    }
+
+.btn-nav {
+    background-color: rgb(103, 211, 103);
+    margin-left: 20px;
+}
+/* Other */
 
 
-  /* Slide bar
-  Make the image fully responsive */
-  .carousel-inner img {
-    width: 100%;
-    height: 500px;
-  }
 
-  /* login form */
+#other h2 {
+    margin-top: 100px;
+    color: red;
+}
 
-  .container {
-    /* margin-top: 10px; */
-    /* background-color: #fff; */
-    /* padding: 20px; */
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
+.divider img {
+    margin: 30px
+}
 
-  input {
-    width: 90%;
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  
-  .btn-secondary {
+.ourstory, .other-p {
+    width: 40%;
+}
+
+.discover a {
+    text-decoration: none;
+    color: #c2615b;
+    margin: 30px;
+    border: 2px solid #c2615b;
+    padding: 10px;
+}
+
+
+
+
+
+/* New One */
+/* Additional styling for better visualization */
+/* About */
+
+.founders a {
+    text-decoration: none;
+    font-size: 128px;
+    font-size: 8rem;
+    font-weight: 500;
+    font-family: 'EB Garamond',serif;
+}
+
+.founders h5 {
+    margin: 20px 0px 30px 0px;
+    line-height: 1.6;
+    font-size: 1.2em;
+}
+
+.founders-data {
+    margin-bottom: 200px;
+    justify-items:center;
+}
+
+.card {
+    margin-right: 0px;
+}
+
+
+.container {
+    box-shadow:none;
+    display: flex;
     margin: auto;
-  }
-
-  .container-fluid h2{
     align-items: center;
-    margin: auto;
-  }
-
-
-
-
-
-  /* 
-  Registration Form
-  */
-
-  .container1 {
-    /* margin-top: 100px; */
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
-  }
-  
-h1 {
-  text-align: center;
 }
 
-.form-group {
-  margin-bottom: 15px;
+
+section {
+    padding: 0px 0;
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
+.about-section {
+    display: flex;
+    align-items: center;
 }
 
-input,
-textarea {
-  width: 90%;
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
+    .about-section img {
+        max-width: 100%;
+        height: auto;
+        margin-right: 20px;
+    }
 
-select {
-  width: 90%;
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
+    .about-section h3 {
+        margin-bottom: 10px;
+    }
 
-.modal-content {
-  border-radius: 3.299999999999997rem
-}
+    .about-section ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
 
-/* .container button {
-  margin: 0px  50px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-} */
-
-button:hover {
-  background-color: #b38600;
-}
+    .about-section li {
+        margin-bottom: 5px;
+    }

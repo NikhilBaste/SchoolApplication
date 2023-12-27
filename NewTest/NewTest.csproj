@@ -72,6 +72,7 @@
     <Content Include="CSS\bootstrap-grid.min.css" />
     <Content Include="CSS\bootstrap.css" />
     <Content Include="CSS\bootstrap.min.css" />
+    <Content Include="CSS\model.css" />
     <Content Include="CSS\style.css" />
     <Content Include="Home.aspx" />
     <Content Include="Image\college-campus.jpg" />

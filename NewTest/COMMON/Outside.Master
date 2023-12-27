@@ -19,6 +19,7 @@
     <script src="../JS/bootstrap.js"></script>
     <script src="../JS/bootstrap.min.js"></script>
     <link href="../CSS/style.css" rel="stylesheet" />
+    <link href="../CSS/model.css" rel="stylesheet" />
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -26,45 +27,47 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <nav class="navbar navbar-expand-lg  fixed-top">
-                <a class="navbar-brand" href="#">
-                    <img class="logo" src="../Image/college-campus.jpg" alt="">
-                    <h5>School-Social</h5>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+           
+            
+  <nav class="navbar navbar-expand-lg  fixed-top">
+    <a class="navbar-brand" href="#">
+      <img class="logo" src="" alt="">
+      <h5> School-Social</h5>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item ">
-                            <a class="nav-link" href="../Home.aspx">Home </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../About.aspx">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../Services.aspx">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact us</a>
-                        </li>
-                    </ul>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item ">
+          <a class="nav-link" href="">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact us</a>
+        </li>
+      </ul>
 
-                    <div class="justify-content-between align-items-center">
-                        <%-- <form class="form-inline" action="#">--%>
-                        <button type="button" class="btn btn-outline-primary" data-toggle="modal"
-                            data-target="#myRegistration">
-                            Registration</button>
-                        <button type="button" class="btn btn-outline-primary" data-toggle="modal"
-                            data-target="#myModal">
-                            Login</button>
-                        
-                        <%-- </form>--%>
-                    </div>
-                </div>
-            </nav>
+      <div class="justify-content-between align-items-center">
+        <form class="form-inline" action="#">
+          <button type="button" class="btn btn-nav btn-outline-primary" data-toggle="modal"
+            data-target="#myRegistration">Registration</button>
+          <button type="button" class="btn btn-nav btn-outline-primary" data-toggle="modal"
+            data-target="#myModal">Login</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+
 
             <div class="modal fade" id="myModal">
                 <div class="modal-dialog modal-dialog-centered">
