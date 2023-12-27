@@ -5,6 +5,7 @@
 <html>
 <head runat="server">
     <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="../CSS/style1.css" rel="stylesheet" />
     <link href="../CSS/bootstrap-grid.css" rel="stylesheet" />
     <link href="../CSS/bootstrap-grid.min.css" rel="stylesheet" />
@@ -18,9 +19,9 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -41,9 +42,11 @@
                         <a href="../Dashboard.aspx" class="nav_link active"><i class='bx bx-grid-alt nav_icon'></i><span class="nav_name">Dashboard</span> </a>
                         <a href="#" class="nav_link"><i class='bx bx-user nav_icon'></i><span class="nav_name">Student Registration</span> </a>
                         <a href="#" class="nav_link"><i class='bx bx-message-square-detail nav_icon'></i><span class="nav_name">Messages</span> </a>
-                        <a href="#" class="nav_link"><i class='bx bx-bookmark nav_icon'></i><span class="nav_name">State Master</span> </a>
-                        <a href="#" class="nav_link"><i class='bx bx-folder nav_icon'></i><span class="nav_name">District Master</span> </a>
-                        <a href="#" class="nav_link"><i class='bx bx-bar-chart-alt-2 nav_icon'></i><span class="nav_name">City Master</span> </a>
+                        <ul>
+                            <li><a href="#" class="nav_link"><i class='bx bx-bookmark nav_icon'></i><span class="nav_name">State Master</span> </a></li>
+                            <li><a href="#" class="nav_link"><i class='bx bx-folder nav_icon'></i><span class="nav_name">District Master</span> </a></li>
+                            <li><a href="#" class="nav_link"><i class='bx bx-bar-chart-alt-2 nav_icon'></i><span class="nav_name">City Master</span> </a></li>
+                        </ul>
                         <a href="#" class="nav_link"><i class='bx bx-bookmark nav_icon'></i><span class="nav_name">Controls</span> </a>
                         <a href="../News.aspx" class="nav_link"><i class='bx bx-folder nav_icon'></i><span class="nav_name">Newsletters</span> </a>
                         <a href="#" class="nav_link"><i class='bx bx-bar-chart-alt-2 nav_icon'></i><span class="nav_name">Awards</span> </a>
@@ -51,12 +54,12 @@
                         <a href="#" class="nav_link"><i class='bx bx-folder nav_icon'></i><span class="nav_name">Chat Monitoring</span> </a>
                         <a href="#" class="nav_link"><i class='bx bx-bar-chart-alt-2 nav_icon'></i><span class="nav_name">Settings</span> </a>
                         <a href="#" class="nav_link"><i class='bx bx-log-out nav_icon'></i><span class="nav_name">SignOut</span> </a>
-
                     </div>
                 </div>
             </nav>
         </div>
-        <div>
+        <div style="margin-top:100px;">
+           
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
