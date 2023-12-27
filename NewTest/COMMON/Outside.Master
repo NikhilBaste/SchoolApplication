@@ -104,81 +104,141 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="modal modal1 fade" id="myRegistration">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
 
                         <!-- Modal Header -->
                         <div class="modal-header">
-                            <h4 class="modal-title ">Registration Form</h4>
-
+                            <h4 class="modal-title">Registration Form</h4>
                         </div>
+
                         <!-- Modal body -->
-                        <div class="container1">
-                            <%-- <form action="#">--%>
-                            <div class="form-group">
-                                <label for="fullname">Full Name:</label>
-                                <input type="text" id="fullname" name="fullname" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone:</label>
-                                <input type="tel" id="phone" name="phone" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="program">Course:</label>
-                                <select id="program" name="program">
-                                    <option value="computer-science">Computer Science</option>
-                                    <option value="biology">Biology</option>
-                                    <option value="engineering">Engineering</option>
-                                </select>
-                            </div>
+                        <div class="modal-body">
+                            <form>
+                                <!-- School Registration ID -->
+                                <div class="mb-3">
+                                    <label for="schoolRegId" class="form-label">School Registration ID</label>
+                                    <input type="text" class="form-control" id="schoolRegId">
+                                </div>
+                                <!-- School Name -->
+                                <div class="mb-3">
+                                    <label for="schoolName" class="form-label">School Name</label>
+                                    <input type="text" class="form-control" id="schoolName">
+                                </div>
+                                <!-- Address -->
+                                <div class="mb-3">
+                                    <label for="address" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="address">
+                                </div>
 
-                            <div class="form-group">
-                                <label for="state">State:</label>
-                                <select id="state" name="program">
-                                    <option value="mh">Maharastra</option>
-                                    <option value="goa">Goa</option>
-                                    <option value="guj">Gujrat</option>
-                                </select>
-                            </div>
+                                <!-- State -->
+                                <div class="mb-3">
+                                    <label for="state" class="form-label">State:</label>
+                                    <select id="state" name="program">
+                                        <option value="mh">Maharastra</option>
+                                        <option value="goa">Goa</option>
+                                        <option value="guj">Gujrat</option>
+                                    </select>
+                                </div>
 
-                            <div class="form-group">
-                                <label for="district">District:</label>
-                                <select id="district" name="program">
-                                    <option value="15">Nashik</option>
-                                    <option value="18">Chandwad</option>
-                                    <option value="any">other</option>
-                                </select>
-                            </div>
 
-                            <div class="form-group">
-                                <label for="pincode">Pincode:</label>
-                                <input type="text" id="pincode" name="pincode" required>
-                            </div>
+                                <!-- District -->
+                                <div class="mb-3">
+                                    <label for="district" class="form-label">District:</label>
+                                    <select id="district" name="program">
+                                        <option value="15">Nashik</option>
+                                        <option value="18">Chandwad</option>
+                                        <option value="any">other</option>
+                                    </select>
+                                </div>
 
-                            <div class="form-group">
-                                <label for="message">Local Address:</label>
-                                <textarea id="message" name="message"></textarea>
-                            </div>
-                            <!-- <button type="submit">Submit</button>
-          <button onclick="location.href='Home.html'">Back</button> -->
-                            <%-- </form>--%>
+                                <!-- City -->
+                                <div class="mb-3">
+                                    <label for="city" class="form-label">City:</label>
+                                    <select id="city" name="program">
+                                        <option value="15">Nashik</option>
+                                        <option value="18">Chandwad</option>
+                                        <option value="any">other</option>
+                                    </select>
+                                </div>
+
+                                <!-- Pincode -->
+                                <div class="mb-3">
+                                    <label for="pincode" class="form-label">Pincode</label>
+                                    <input type="text" class="form-control" id="pincode">
+                                </div>
+                                <!-- Land Line -->
+                                <div class="mb-3">
+                                    <label for="landLine" class="form-label">Land Line</label>
+                                    <input type="text" class="form-control" id="landLine">
+                                </div>
+                                <!-- Mobile Number -->
+                                <div class="mb-3">
+                                    <label for="mobileNo" class="form-label">Mobile Number</label>
+                                    <input type="text" class="form-control" id="mobileNo">
+                                </div>
+                                <!-- Email -->
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                                <!-- Web Address -->
+                                <div class="mb-3">
+                                    <label for="webAddress" class="form-label">Web Address</label>
+                                    <input type="text" class="form-control" id="webAddress">
+                                </div>
+                                <!-- Establishment Date -->
+                                <div class="mb-3">
+                                    <label for="estabDate" class="form-label">Establishment Date</label>
+                                    <input type="date" class="form-control" id="estabDate">
+                                </div>
+                                <!-- School PRN -->
+                                <div class="mb-3">
+                                    <label for="schoolPRN" class="form-label">School PRN</label>
+                                    <input type="text" class="form-control" id="schoolPRN">
+                                </div>
+                                <!-- GST Number -->
+                                <div class="mb-3">
+                                    <label for="gstNo" class="form-label">GST Number</label>
+                                    <input type="text" class="form-control" id="gstNo">
+                                </div>
+                                <!-- Rank -->
+                                <div class="mb-3">
+                                    <label for="rank" class="form-label">Rank</label>
+                                    <input type="text" class="form-control" id="rank">
+                                </div>
+                                <!-- Undertaken -->
+                                <div class="mb-3">
+                                    <label for="undertaken" class="form-label">Undertaken</label>
+                                    <input type="text" class="form-control" id="undertaken">
+                                </div>
+                                <!-- UGC ID -->
+                                <div class="mb-3">
+                                    <label for="ugcId" class="form-label">UGC ID</label>
+                                    <input type="text" class="form-control" id="ugcId">
+                                </div>
+                                <!-- School Registration Date -->
+                                <div class="mb-3">
+                                    <label for="schoolRegDate" class="form-label">School Registration Date</label>
+                                    <input type="date" class="form-control" id="schoolRegDate">
+                                </div>
+
+
+
+                          
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Register</button>
+                                </div>
+                            </form>
                         </div>
-
-
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Register</button>
-                        </div>
-
                     </div>
                 </div>
             </div>
+
+
 
 
             <asp:ContentPlaceHolder ID="BodyContent" runat="server">
