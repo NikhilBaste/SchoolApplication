@@ -9,7 +9,6 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 
-
     <link href="../CSS/bootstrap-grid.css" rel="stylesheet" />
     <link href="../CSS/bootstrap-grid.min.css" rel="stylesheet" />
     <link href="../CSS/bootstrap.css" rel="stylesheet" />
@@ -20,7 +19,6 @@
     <script src="../JS/bootstrap.min.js"></script>
     <link href="../CSS/style.css" rel="stylesheet" />
     <link href="../CSS/model.css" rel="stylesheet" />
-
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
