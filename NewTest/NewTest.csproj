@@ -74,6 +74,7 @@
     <Content Include="CSS\bootstrap.min.css" />
     <Content Include="CSS\model.css" />
     <Content Include="CSS\style.css" />
+    <Content Include="CSS\style1.css" />
     <Content Include="Dashboard.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Image\college-campus.jpg" />
@@ -84,6 +85,7 @@
     <Content Include="JS\bootstrap.bundle.min.js" />
     <Content Include="JS\bootstrap.js" />
     <Content Include="JS\bootstrap.min.js" />
+    <Content Include="JS\sim1.js" />
     <Content Include="News.aspx" />
     <Content Include="Services.aspx" />
     <Content Include="Web.config" />
