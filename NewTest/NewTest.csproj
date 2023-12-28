@@ -89,6 +89,7 @@
     <Content Include="News.aspx" />
     <Content Include="Services.aspx" />
     <Content Include="Web.config" />
+    <Content Include="StateMaster.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -140,6 +141,13 @@
     </Compile>
     <Compile Include="Services.aspx.designer.cs">
       <DependentUpon>Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StateMaster.aspx.cs">
+      <DependentUpon>StateMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StateMaster.aspx.designer.cs">
+      <DependentUpon>StateMaster.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
