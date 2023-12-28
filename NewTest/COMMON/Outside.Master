@@ -6,6 +6,9 @@
 <head runat="server">
     <title></title>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 
@@ -20,50 +23,55 @@
     <link href="../CSS/style.css" rel="stylesheet" />
     <link href="../CSS/model.css" rel="stylesheet" />
 
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-           
-            
-  <nav class="navbar navbar-expand-lg  fixed-top">
-    <a class="navbar-brand" href="#">
-      <img class="logo" src="" alt="">
-      <h5> School-Social</h5>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item ">
-          <a class="nav-link" href="">Home </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="index.html#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact us</a>
-        </li>
-      </ul>
 
-      <div class="justify-content-between align-items-center">
-        <form class="form-inline" action="#">
-          <button type="button" class="btn btn-nav btn-outline-primary" data-toggle="modal"
-            data-target="#myRegistration">Registration</button>
-          <button type="button" class="btn btn-nav btn-outline-primary" data-toggle="modal"
-            data-target="#myModal">Login</button>
-        </form>
-      </div>
-    </div>
-  </nav>
+            <nav class="navbar navbar-expand-lg  fixed-top">
+                <a class="navbar-brand" href="#">
+                    <img class="logo" src="../Image/college-campus.jpg" alt="">
+                    <h5>School-Social</h5>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fas fa-bars"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 text-center">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="">Home </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact us</a>
+                        </li>
+                    </ul>
+
+                    <div class="justify-content-between align-items-center">
+                        <form class="form-inline" action="#">
+                            <asp:Button ID="sch_registration" type="button" runat="server" Text="Registration" data-toggle="modal" data-target="#myRegistration" class="btn btn-nav btn-outline-primary" OnClick="sch_registration_Click" />
+
+                            <%--   <button type="button" class="btn btn-nav btn-outline-primary" data-toggle="modal"
+            data-target="#myRegistration" onclick="New_Click">Registration</button>--%>
+
+                            <button type="button" class="btn btn-nav btn-outline-primary" data-toggle="modal"
+                                data-target="#myModal">
+                                Login</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
 
 
 
@@ -81,30 +89,37 @@
                         <div class="modal-body">
                             <div class="container1">
                                 <%--<form action="#">--%>
-                                    <div class="form-group">
-                                        <label>Username:</label>                                        
-                                        <asp:TextBox ID="txtUsername" runat="server" Text="sar"></asp:TextBox>
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Req" ForeColor="Red" ControlToValidate="txtUsername"></asp:RequiredFieldValidator>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Password:</label>
-                                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Req" ForeColor="Red" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
-                                    </div>
-                               <%-- </form>--%>
+
+
+
+
+
+
+
+                                <div class="form-group">
+                                    <label>Username:</label>
+                                    <asp:TextBox ID="txtUsername" runat="server" Text="sar"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Req" ForeColor="Red" ControlToValidate="txtUsername"></asp:RequiredFieldValidator>
+                                </div>
+                                <div class="form-group">
+                                    <label>Password:</label>
+                                    <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Req" ForeColor="Red" ControlToValidate="txtPassword"></asp:RequiredFieldValidator>
+                                </div>
+                                <%-- </form>--%>
                             </div>
                         </div>
 
                         <!-- Modal footer -->
                         <div class="modal-footer">
                             <asp:Button ID="Button1" CssClass="btn btn-secondary" runat="server" Text="Login" />
-                           <%-- <button type="button" class="" data-dismiss="modal">Login</button>--%>
+                            <%-- <button type="button" class="" data-dismiss="modal">Login</button>--%>
                         </div>
 
                     </div>
                 </div>
             </div>
-            
+
             <div class="modal modal1 fade" id="myRegistration">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
@@ -119,18 +134,20 @@
                             <form>
                                 <!-- School Registration ID -->
                                 <div class="mb-3">
+
                                     <label for="schoolRegId" class="form-label">School Registration ID</label>
-                                    <input type="text" class="form-control" id="schoolRegId">
+                                    <asp:TextBox class="form-control" ID="schoolRegId" runat="server"></asp:TextBox>
                                 </div>
                                 <!-- School Name -->
                                 <div class="mb-3">
                                     <label for="schoolName" class="form-label">School Name</label>
-                                    <input type="text" class="form-control" id="schoolName">
+                                    <asp:TextBox class="form-control" ID="schoolName" runat="server"></asp:TextBox>
+
                                 </div>
                                 <!-- Address -->
                                 <div class="mb-3">
                                     <label for="address" class="form-label">Address</label>
-                                    <input type="text" class="form-control" id="address">
+                                    <asp:TextBox class="form-control" ID="address" runat="server"></asp:TextBox>
                                 </div>
 
                                 <!-- State -->
@@ -167,67 +184,89 @@
                                 <!-- Pincode -->
                                 <div class="mb-3">
                                     <label for="pincode" class="form-label">Pincode</label>
-                                    <input type="text" class="form-control" id="pincode">
+                                    <asp:TextBox class="form-control" id="pincode" runat="server"></asp:TextBox>
+                                   
                                 </div>
                                 <!-- Land Line -->
                                 <div class="mb-3">
                                     <label for="landLine" class="form-label">Land Line</label>
-                                    <input type="text" class="form-control" id="landLine">
+                                    <asp:TextBox  class="form-control" id="landLine" runat="server"></asp:TextBox>
+
+                                   
                                 </div>
                                 <!-- Mobile Number -->
                                 <div class="mb-3">
                                     <label for="mobileNo" class="form-label">Mobile Number</label>
-                                    <input type="text" class="form-control" id="mobileNo">
+                                    <asp:TextBox class="form-control" id="mobileNo" runat="server"></asp:TextBox>
+
                                 </div>
                                 <!-- Email -->
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email">
+                                    <asp:TextBox CssClass="form-control" ID="email" runat="server"></asp:TextBox>
+
+                                    <input type="email" >
                                 </div>
                                 <!-- Web Address -->
                                 <div class="mb-3">
                                     <label for="webAddress" class="form-label">Web Address</label>
+                                    <asp:TextBox class="form-control" ID="TextBox5" runat="server"></asp:TextBox>
+
                                     <input type="text" class="form-control" id="webAddress">
                                 </div>
                                 <!-- Establishment Date -->
                                 <div class="mb-3">
                                     <label for="estabDate" class="form-label">Establishment Date</label>
+                                    <asp:TextBox class="form-control" ID="TextBox6" runat="server"></asp:TextBox>
+
                                     <input type="date" class="form-control" id="estabDate">
                                 </div>
                                 <!-- School PRN -->
                                 <div class="mb-3">
                                     <label for="schoolPRN" class="form-label">School PRN</label>
+                                    <asp:TextBox class="form-control" ID="TextBox7" runat="server"></asp:TextBox>
+
                                     <input type="text" class="form-control" id="schoolPRN">
                                 </div>
                                 <!-- GST Number -->
                                 <div class="mb-3">
                                     <label for="gstNo" class="form-label">GST Number</label>
+                                    <asp:TextBox class="form-control" ID="TextBox8" runat="server"></asp:TextBox>
+
                                     <input type="text" class="form-control" id="gstNo">
                                 </div>
                                 <!-- Rank -->
                                 <div class="mb-3">
                                     <label for="rank" class="form-label">Rank</label>
+                                    <asp:TextBox class="form-control" ID="TextBox9" runat="server"></asp:TextBox>
+
                                     <input type="text" class="form-control" id="rank">
                                 </div>
                                 <!-- Undertaken -->
                                 <div class="mb-3">
                                     <label for="undertaken" class="form-label">Undertaken</label>
+                                    <asp:TextBox class="form-control" ID="TextBox10" runat="server"></asp:TextBox>
+
                                     <input type="text" class="form-control" id="undertaken">
                                 </div>
                                 <!-- UGC ID -->
                                 <div class="mb-3">
                                     <label for="ugcId" class="form-label">UGC ID</label>
+                                    <asp:TextBox class="form-control" ID="TextBox11" runat="server"></asp:TextBox>
+
                                     <input type="text" class="form-control" id="ugcId">
                                 </div>
                                 <!-- School Registration Date -->
                                 <div class="mb-3">
                                     <label for="schoolRegDate" class="form-label">School Registration Date</label>
+                                    <asp:TextBox class="form-control" ID="TextBox12" runat="server"></asp:TextBox>
+
                                     <input type="date" class="form-control" id="schoolRegDate">
                                 </div>
 
 
 
-                          
+
                                 <!-- Modal footer -->
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Register</button>
@@ -237,6 +276,9 @@
                     </div>
                 </div>
             </div>
+
+
+
 
 
 

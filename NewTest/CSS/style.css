@@ -9,13 +9,29 @@ body {
 }
 
 .navbar {
-    border: 2px solid red;
+    background-color: rgb(0 0 0 / 80%);
+    transition: all 0.5s;
+    z-index: 997;
+   
 }
+
+.logo {
+    width: 50px;
+    border-radius: 50px;
+}
+
 
 .navbar-brand {
     display: flex;
     align-items: center;
 }
+
+ img {
+       width:50px;
+       border-radius: 9px;
+}
+
+
 
 
     .navbar-brand h5 {
@@ -23,6 +39,7 @@ body {
         margin-left: 10px;
         margin-top: 8px;
     }
+
 
 .navbar-nav {
     margin: auto;
@@ -40,6 +57,18 @@ body {
     background-color: rgb(103, 211, 103);
     margin-left: 20px;
 }
+
+.fa-bars {
+    display: flex;
+    width: max-content;
+    align-items: center;
+}
+
+
+
+
+
+
 /* Other */
 
 
@@ -132,3 +161,5 @@ section {
     .about-section li {
         margin-bottom: 5px;
     }
+
+

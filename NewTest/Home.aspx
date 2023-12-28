@@ -23,6 +23,7 @@
         <div class="carousel-item">
           <img src="Image/college-campus1.jpg" class="d-block w-100" alt="...">
         </div>
+
         <div class="carousel-item">
           <img src="Image/college-campus2.jpg" class="d-block w-100" alt="...">
         </div>
@@ -86,7 +87,7 @@
 
 
   <!-- About Section -->
-  <section id="about" >
+ <%-- <section id="about" >
     <dev class="founders text-center">
       <h1><a href="#">Founders</a></h1>
       <h5>The Faces Behind the Innovation’s !!</h5>
@@ -131,7 +132,7 @@
 
   </div>
 </div>
-  </section>
+  </section>--%>
 
 
 
