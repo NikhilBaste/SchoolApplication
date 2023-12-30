@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IdentityModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -73,6 +74,7 @@
     <Content Include="CSS\bootstrap.css" />
     <Content Include="CSS\bootstrap.min.css" />
     <Content Include="CSS\model.css" />
+    <Content Include="CSS\Reg_Style.css" />
     <Content Include="CSS\style.css" />
     <Content Include="CSS\style1.css" />
     <Content Include="Dashboard.aspx" />
@@ -87,6 +89,7 @@
     <Content Include="JS\bootstrap.min.js" />
     <Content Include="JS\sim1.js" />
     <Content Include="News.aspx" />
+    <Content Include="School_Registration.aspx" />
     <Content Include="Services.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -134,6 +137,13 @@
       <DependentUpon>News.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="School_Registration.aspx.cs">
+      <DependentUpon>School_Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="School_Registration.aspx.designer.cs">
+      <DependentUpon>School_Registration.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Services.aspx.cs">
       <DependentUpon>Services.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

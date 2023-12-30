@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="CSS/style.css" rel="stylesheet" />
+    <link href="CSS/model.css" rel="stylesheet" />
     
 
 </asp:Content>

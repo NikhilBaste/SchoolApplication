@@ -26,10 +26,7 @@ body {
     align-items: center;
 }
 
- img {
-       width:50px;
-       border-radius: 9px;
-}
+ 
 
 
 
@@ -53,9 +50,16 @@ body {
         opacity: 1;
     }
 
+
+
+
 .btn-nav {
     background-color: rgb(103, 211, 103);
     margin-left: 20px;
+}
+
+.reg-logbtn {
+    display:flex;
 }
 
 .fa-bars {
@@ -126,8 +130,10 @@ body {
 }
 
 
-.container {
-    box-shadow:none;
+ /*.container*/
+
+.other, .ourstory {
+    box-shadow: none;
     display: flex;
     margin: auto;
     align-items: center;

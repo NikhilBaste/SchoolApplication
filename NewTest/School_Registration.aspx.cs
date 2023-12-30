@@ -1,34 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Configuration;
-using System.Data.SqlClient;
-using System.Xml.Linq;
-using System.Data;
-using System.Web.Configuration;
-using System.Drawing.Drawing2D;
-using System.IdentityModel.Metadata;
-using System.Drawing;
+using System.Xml;
 
-namespace NewTest.COMMON
+namespace NewTest
 {
-    public partial class Outside : System.Web.UI.MasterPage
+    public partial class School_Registration : System.Web.UI.Page
     {
         SqlConnection conn = new SqlConnection();
-
-        //public object ClientScript { get; private set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString);
             bindState();
+
+
+            if (state.SelectedValue != "" && district.SelectedValue == "")
+            {
+                
+                district.Enabled = false;
+                city.Enabled = false;
+            }
         }
 
         protected void regbtn_Click(object sender, EventArgs e)
         {
+
 
             try
             {
@@ -53,7 +56,7 @@ namespace NewTest.COMMON
                 cmd.Parameters.AddWithValue("School_Regdate", school_reg_date.Text);
                 cmd.Parameters.AddWithValue("UGC_id", ugcId.Text);
                 cmd.Parameters.AddWithValue("Rank", rank.Text);
-             
+
                 conn.Open();
                 int k = cmd.ExecuteNonQuery();
                 if (k == 1)
@@ -73,15 +76,36 @@ namespace NewTest.COMMON
 
             }
 
+            schoolName.Text = string.Empty;
+            address.Text = string.Empty;
+            pincode.Text = string.Empty;
+            landLine.Text = string.Empty;
+            mobileNo1.Text = string.Empty;
+            mobileNo2.Text = string.Empty;
+            email.Text = string.Empty;
+            webAddress.Text = string.Empty;
+            estabDate.Text = string.Empty;
+            undertaken.Text = string.Empty;
+            schoolPRN.Text = string.Empty;
+            gstNo.Text = string.Empty;
+            School_Registration_No.Text = string.Empty;
+            school_reg_date.Text = string.Empty;
+            ugcId.Text = string.Empty;
+            rank.Text = string.Empty;
+
             
+            state.SelectedIndex = 0; 
+            district.Items.Clear(); 
+            district.Items.Add(new ListItem("--Select--", "")); 
+            city.Items.Clear(); 
+            city.Items.Add(new ListItem("--Select--", ""));
+
+            district.Enabled = false;
+            city.Enabled = false;
 
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/Dashboard.aspx");
-        }
 
         private void bindState()
         {
@@ -89,9 +113,9 @@ namespace NewTest.COMMON
             SqlDataAdapter adpt = new SqlDataAdapter(command, conn);
             DataTable dt = new DataTable();
 
-            adpt.Fill(dt);              
+            adpt.Fill(dt);
             state.DataSource = dt;
-            
+
             state.DataTextField = "State_name";
             state.DataValueField = "S_id";
             state.DataBind();
@@ -99,7 +123,7 @@ namespace NewTest.COMMON
 
         private void bindDistrict()
         {
-            string command = "select D_id,District_name from District where S_id='"+state.SelectedValue.ToString()+"' ";
+            string command = "select D_id,District_name from District where S_id='" + state.SelectedValue.ToString() + "' ";
             SqlDataAdapter adpt = new SqlDataAdapter(command, conn);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -112,7 +136,7 @@ namespace NewTest.COMMON
 
         private void bindCity()
         {
-            string command = " select C_id,City_name from City  where D_id='"+district.SelectedValue.ToString()+ "' ";
+            string command = " select C_id,City_name from City  where D_id='" + district.SelectedValue.ToString() + "' ";
             SqlDataAdapter adpt = new SqlDataAdapter(command, conn);
             DataTable dt = new DataTable();
             adpt.Fill(dt);
@@ -123,20 +147,37 @@ namespace NewTest.COMMON
             city.DataBind();
         }
 
+        private void enableDistrict()
+        {
+            if (state.SelectedValue == "")
+                district.Enabled = false;
+            else
+                district.Enabled = true;
+        }
+
+        private void enableCity()
+        {
+            if (district.SelectedValue == "")
+                city.Enabled = false;
+            else
+                city.Enabled = true;
+        }
+
 
         protected void state_SelectedIndexChanged(object sender, EventArgs e)
         {
             district.Focus();
             bindDistrict();
+            enableDistrict();
+
         }
 
         protected void district_SelectedIndexChanged(object sender, EventArgs e)
         {
             bindCity();
+            enableCity();
         }
 
         
     }
-
 }
-    
