@@ -19,16 +19,26 @@ namespace NewTest.COMMON
     {
         SqlConnection conn = new SqlConnection();
 
-        //public object ClientScript { get; private set; }
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
             conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString);
             bindState();
+
+            if (state.SelectedValue != "" && district.SelectedValue == "")
+            {
+
+                district.Enabled = false;
+                city.Enabled = false;
+            }
+
+
         }
 
         protected void regbtn_Click(object sender, EventArgs e)
         {
+           
 
             try
             {
@@ -73,14 +83,71 @@ namespace NewTest.COMMON
 
             }
 
-            
+
+            schoolName.Text = string.Empty;
+            address.Text = string.Empty;
+            pincode.Text = string.Empty;
+            landLine.Text = string.Empty;
+            mobileNo1.Text = string.Empty;
+            mobileNo2.Text = string.Empty;
+            email.Text = string.Empty;
+            webAddress.Text = string.Empty;
+            estabDate.Text = string.Empty;
+            undertaken.Text = string.Empty;
+            schoolPRN.Text = string.Empty;
+            gstNo.Text = string.Empty;
+            School_Registration_No.Text = string.Empty;
+            school_reg_date.Text = string.Empty;
+            ugcId.Text = string.Empty;
+            rank.Text = string.Empty;
+
+
+            state.SelectedIndex = 0;
+            district.Items.Clear();
+            district.Items.Add(new ListItem("--Select--", ""));
+            city.Items.Clear();
+            city.Items.Add(new ListItem("--Select--", ""));
+
+            district.Enabled = false;
+            city.Enabled = false;
 
 
         }
 
+
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Dashboard.aspx");
+           
+
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+
+            
+                using (SqlCommand command = new SqlCommand("School_Login", conn))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@Password", password);
+
+                    conn.Open();
+                    int result = Convert.ToInt32(command.ExecuteScalar());
+
+                    if (result == 1)
+                    {
+                        // Credentials are valid, redirect to another page
+                        Response.Redirect("~/Dashborad.aspx");
+                    }
+                    else
+                    {
+                        // Credentials are invalid, show an error message
+                        
+                        Label1.Text = "Invalid username or password.";
+                }
+                }
+            
+
+
+
         }
 
         private void bindState()
@@ -123,16 +190,35 @@ namespace NewTest.COMMON
             city.DataBind();
         }
 
+        private void enableDistrict()
+        {
+            if (state.SelectedValue == "")
+                district.Enabled = false;
+            else
+                district.Enabled = true;
+        }
+
+        private void enableCity()
+        {
+            if (district.SelectedValue == "")
+                city.Enabled = false;
+            else
+                city.Enabled = true;
+        }
+
 
         protected void state_SelectedIndexChanged(object sender, EventArgs e)
         {
             district.Focus();
             bindDistrict();
+            enableDistrict();
         }
 
         protected void district_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             bindCity();
+            enableCity();
         }
 
         

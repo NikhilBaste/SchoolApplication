@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace NewTest
 {
-    public partial class Services : System.Web.UI.Page
+    public partial class Message : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

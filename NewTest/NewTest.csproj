@@ -69,15 +69,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="contact.aspx" />
     <Content Include="CSS\bootstrap-grid.css" />
     <Content Include="CSS\bootstrap-grid.min.css" />
     <Content Include="CSS\bootstrap.css" />
     <Content Include="CSS\bootstrap.min.css" />
+    <Content Include="CSS\contact.css" />
+    <Content Include="CSS\main.css" />
     <Content Include="CSS\model.css" />
     <Content Include="CSS\Reg_Style.css" />
+    <Content Include="CSS\service.css" />
     <Content Include="CSS\style.css" />
     <Content Include="CSS\style1.css" />
-    <Content Include="Dashboard.aspx" />
+    <Content Include="CSS\style2.css" />
+    <Content Include="Dashborad.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Image\college-campus.jpg" />
     <Content Include="Image\college-campus1.jpg" />
@@ -87,12 +92,13 @@
     <Content Include="JS\bootstrap.bundle.min.js" />
     <Content Include="JS\bootstrap.js" />
     <Content Include="JS\bootstrap.min.js" />
+    <Content Include="JS\Script.js" />
     <Content Include="JS\sim1.js" />
-    <Content Include="News.aspx" />
+    <Content Include="Message.aspx" />
     <Content Include="School_Registration.aspx" />
-    <Content Include="Services.aspx" />
+    <Content Include="service.aspx" />
+    <Content Include="studentRegistration.aspx" />
     <Content Include="Web.config" />
-    <Content Include="StateMaster.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -116,12 +122,19 @@
     <Compile Include="COMMON\Outside.Master.designer.cs">
       <DependentUpon>Outside.Master</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard.aspx.cs">
-      <DependentUpon>Dashboard.aspx</DependentUpon>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dashboard.aspx.designer.cs">
-      <DependentUpon>Dashboard.aspx</DependentUpon>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashborad.aspx.cs">
+      <DependentUpon>Dashborad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashborad.aspx.designer.cs">
+      <DependentUpon>Dashborad.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -130,12 +143,12 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="News.aspx.cs">
-      <DependentUpon>News.aspx</DependentUpon>
+    <Compile Include="Message.aspx.cs">
+      <DependentUpon>Message.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="News.aspx.designer.cs">
-      <DependentUpon>News.aspx</DependentUpon>
+    <Compile Include="Message.aspx.designer.cs">
+      <DependentUpon>Message.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="School_Registration.aspx.cs">
@@ -145,19 +158,19 @@
     <Compile Include="School_Registration.aspx.designer.cs">
       <DependentUpon>School_Registration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Services.aspx.cs">
-      <DependentUpon>Services.aspx</DependentUpon>
+    <Compile Include="service.aspx.cs">
+      <DependentUpon>service.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Services.aspx.designer.cs">
-      <DependentUpon>Services.aspx</DependentUpon>
+    <Compile Include="service.aspx.designer.cs">
+      <DependentUpon>service.aspx</DependentUpon>
     </Compile>
-    <Compile Include="StateMaster.aspx.cs">
-      <DependentUpon>StateMaster.aspx</DependentUpon>
+    <Compile Include="studentRegistration.aspx.cs">
+      <DependentUpon>studentRegistration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="StateMaster.aspx.designer.cs">
-      <DependentUpon>StateMaster.aspx</DependentUpon>
+    <Compile Include="studentRegistration.aspx.designer.cs">
+      <DependentUpon>studentRegistration.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

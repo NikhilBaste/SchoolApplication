@@ -1,7 +1,151 @@
-﻿
+﻿.reg-body {
+    max-height: 500px;
+    overflow-y: auto;
+}
 
 
-    
+
+
+
+
+
+
+
+/* OLD REG MODAL*/
+
+.modal-content-register {
+    width: 800px;
+    display: flex;
+    margin: auto;
+}
+
+
+@media (min-width: 576px) {
+}
+
+.modal-dialog-register {
+    max-width: 800px;
+    margin: 5.75rem auto;
+}
+
+.modal-header {
+    justify-content: center;
+}
+
+.Header-reg {
+    align-items: center;
+    justify-content: center;
+}
+
+    .Header-reg h4 {
+        font-size: 25px;
+        font-weight: bolder;
+    }
+
+
+.reg-Model-Title {
+    display: flex;
+    justify-content: center;
+}
+
+.reg-Model-Footer {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+
+
+
+
+/* Registration Form */
+
+.container-reg {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: center;
+    align-items: center;
+}
+
+.maincon {
+    height: 853px;
+    overflow-y: auto;
+}
+
+/* Style form header */
+h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Style form inputs and labels */
+.form-group label {
+    font-weight: bold;
+    color: #555;
+}
+
+.form-control, .ddlist {
+    border-radius: 5px;
+}
+
+.ddlist {
+    width: 409px;
+    height:35px;
+}
+
+
+.row-form {
+    width: 756px;
+    background-color: #8bd2f4;
+}
+
+
+/* Style button */
+.btn-primary {
+    width: 100px;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+    /* Change button hover color */
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+
+/* Adjust responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding-top: 0;
+    }
+
+    .col-md-6 {
+        margin-top: 20px;
+    }
+}
+
+.Additional {
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    width: 26px;
+    display: flex;
+    height: 35px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 14.5px;
+}
+
+
+.addi-btn-align {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 
 
 
@@ -34,51 +178,17 @@ input {
 
 
 
-
-
-/* 
-  Registration Form
-  */
-
-.container1 {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* new ADD State*/
+.Add-State-content {
+    width: 50%;
 }
 
-h1 {
-    text-align: center;
-}
 
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input,
-textarea {
-    width: 90%;
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-select {
-    width: 90%;
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+.Add-State-Dialog {
+    margin-left: 1000px;
+    margin-top: 216px;
+    max-width: 458px;
 }
 
 
 
-
-
-button:hover {
-    background-color: #b38600;
-}

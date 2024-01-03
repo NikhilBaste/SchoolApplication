@@ -70,6 +70,29 @@ body {
 
 
 
+    .carousel {
+    width: 950px;
+    }
+
+
+
+
+
+section#home {
+    display: flex;
+    padding: 0px 0;
+    justify-content: space-around;
+    background-image: url(../Image/college-campus.jpg);
+}
+
+
+
+
+
+
+
+
+
 
 
 

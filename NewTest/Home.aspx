@@ -3,7 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="CSS/style.css" rel="stylesheet" />
     <link href="CSS/model.css" rel="stylesheet" />
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
 
 </asp:Content>
 
@@ -11,43 +14,82 @@
 
 
     <section id="home">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="Image/college-campus.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="Image/college-campus1.jpg" class="d-block w-100" alt="...">
-        </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Image/college-campus.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="Image/college-campus1.jpg" class="d-block w-100" alt="...">
+                </div>
 
-        <div class="carousel-item">
-          <img src="Image/college-campus2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-item">
+                    <img src="Image/college-campus2.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </section>
+    </section>
 
-  <!-- Other section -->
-  <section id="other">
-    <div class="container-fluid text-center">
 
-      <div class=" other-section">
-        <h2>About Us</h2>
-        <div class="container  other-p ">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil eligendi neque reiciendis tempora aut
+    <script>
+
+
+        $(document).ready(function () {
+            // Listen to the carousel slide event
+            $('#carouselExampleIndicators').on('slide.bs.carousel', function () {
+                // Get the active item index
+                var activeIndex = $('.carousel-item.active').index();
+
+                // Update background image based on the active carousel item index
+                switch (activeIndex) {
+                    case 0:
+                        $('#home').css('background-image', 'url("Image/college-campus.jpg")');
+                        break;
+                    case 1:
+                        $('#home').css('background-image', 'url("Image/college-campus1.jpg")');
+                        break;
+                    case 2:
+                        $('#home').css('background-image', 'url("Image/college-campus2.jpg")');
+                        break;
+                    default:
+                        // Set a default image if needed
+                        $('#home').css('background-image', 'url("Image/default.jpg")');
+                }
+            });
+        });
+
+
+
+    </script>
+
+
+
+
+
+
+
+    <!-- Other section -->
+    <section id="other">
+        <div class="container-fluid text-center">
+
+            <div class=" other-section">
+                <h2>About Us</h2>
+                <div class="container  other-p ">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil eligendi neque reiciendis tempora aut
             dolorum quidem officiis harum repellat! Possimus expedita eum aliquid amet, laudantium odit sunt, quia
             excepturi vitae, ea aperiam ullam quae voluptates impedit molestiae beatae vel dolorum itaque. Dolorum
             veritatis consequuntur soluta aperiam id eum error fugiat molestias in, esse velit voluptas nisi, autem ex
@@ -55,14 +97,16 @@
             vel impedit nam cumque rerum libero sapiente magnam cum! Eveniet consequatur, eum ratione ipsa repudiandae
             commodi in, eligendi alias dolorem, nulla tenetur quibusdam iste iure adipisci officiis porro! Lorem ipsum
             dolor sit amet, consectetur adipiscing elit. Nulla at sem eget metus lobortis condimentum. Praesent
-            hendrerit sem nisi, a iaculis purus vestibulum in.</p>
-        </div>
-        <div class=" divider ">
-          <img src="Image/College.jpeg" alt="">
-        </div>
+            hendrerit sem nisi, a iaculis purus vestibulum in.
+                    </p>
+                </div>
+                <div class=" divider ">
+                    <img src="Image/College.jpeg" alt="">
+                </div>
 
-        <div class="container ourstory">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores voluptate laboriosam corporis nulla
+                <div class="container ourstory">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores voluptate laboriosam corporis nulla
             cumque laborum ratione, quas enim sapiente nobis voluptatum eos id cupiditate magnam? Voluptas hic laborum
             dignissimos veritatis adipisci molestiae dolorum sapiente nisi repudiandae rerum placeat impedit quae eius
             tenetur et consequatur ducimus ea harum ipsum totam, beatae repellat incidunt praesentium! Eaque veritatis
@@ -76,19 +120,20 @@
             odio atque voluptatibus numquam at blanditiis perspiciatis eos saepe rerum optio modi rem molestiae, beatae,
             dolores quasi illo odit repellat repellendus? Amet velit, itaque soluta voluptate maiores assumenda suscipit
             quae iure quas ratione animi quo a minima! Nesciunt ex quasi delectus, aliquam quam fugit, eum deleniti,
-            dolor veniam quod ipsum.</p>
+            dolor veniam quod ipsum.
+                    </p>
+                </div>
+                <div class="container discover justify-content-center">
+                    <a href="#">Discover More</a>
+                </div>
+            </div>
+
         </div>
-        <div class="container discover justify-content-center">
-          <a href="#"> Discover More</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
+    </section>
 
 
-  <!-- About Section -->
- <%-- <section id="about" >
+    <!-- About Section -->
+    <%-- <section id="about" >
     <dev class="founders text-center">
       <h1><a href="#">Founders</a></h1>
       <h5>The Faces Behind the Innovation’s !!</h5>
@@ -139,7 +184,7 @@
 
 
 
-   <%-- <div id="demo" class="carousel slide" data-ride="carousel">
+    <%-- <div id="demo" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
             <li data-target="#demo" data-slide-to="0" class="active"></li>
             <li data-target="#demo" data-slide-to="1"></li>
@@ -168,17 +213,17 @@
                 </div>
             </div>
         </div>--%>
-       <%-- <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <%-- <a class="carousel-control-prev" href="#demo" data-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
         <a class="carousel-control-next" href="#demo" data-slide="next">
             <span class="carousel-control-next-icon"></span>
         </a>--%>
-  <%--  </div>--%>
+    <%--  </div>--%>
 
-    
-  <!-- About Section -->
-  <%--<section id="about">
+
+    <!-- About Section -->
+    <%--<section id="about">
     <div class="container-a cont-about">
       <div class="row">
         <div class="col-lg-12">
@@ -193,8 +238,8 @@
     </div>
   </section>--%>
 
-  <!-- Services Section -->
-  <%--<section id="services">
+    <!-- Services Section -->
+    <%--<section id="services">
     <div class="container-s container-fluid">
       <div class="row">
         <div class="col-lg-12">
@@ -205,8 +250,8 @@
     </div>
   </section>--%>
 
-  <!-- Contact Us Section -->
-<%--  <section id="contact">
+    <!-- Contact Us Section -->
+    <%--  <section id="contact">
     <div class="container-c">
       <div class="row">
         <div class="col-lg-12">
@@ -216,5 +261,4 @@
       </div>
     </div>
   </section> --%>
-
 </asp:Content>
