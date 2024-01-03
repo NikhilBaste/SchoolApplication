@@ -24,7 +24,7 @@
             <ul class="side-menu">
                 <li><a href="../Dashborad.aspx" class="active"><i class='bx bxs-dashboard icon'></i>Dashboard</a></li>
                 <li class="divider" data-text="main">Main</li>
-                <li><a href="../studentRegistration.aspx"><i class='bx bxs-user-plus icon'></i>Students Registration</a></li>
+                <li><a href="../RegistrationForm.aspx"><i class='bx bxs-user-plus icon'></i>Students Registration</a></li>
                 <li><a href="../Message.aspx"><i class='bx bxs-message icon'></i>Messages</a></li>
                 <li>
                     <a href="#"><i class='bx bxs-map icon'></i>Locations <i class='bx bx-chevron-right icon-right'></i></a>
@@ -39,33 +39,7 @@
                 <li><a href="../news.aspx"><i class='bx bx-news icon'></i>Newsletters</a></li>
                 <li><a href="#"><i class='bx bx-cog icon'></i>Settings</a></li>
                 <li><a href="../Home.aspx "><i class='bx bx-log-out-circle icon'></i>Logout</a></li>
-                <!-- <li class="mode">
-                <div class="sun-moon">
-                    <i class='bx bx-moon icon moon'></i>
-                    <i class='bx bx-sun icon sun'></i>
-                </div>
-                <span class="mode-text text">Dark mode</span>
-            
-                <div class="toggle-switch">
-                    <span class="switch"></span>
-                </div> 
-            </li>-->
-                <!-- <li>
-				<a href="#"><i class='bx bxs-notepad icon' ></i> Forms <i class='bx bx-chevron-right icon-right' ></i></a>
-				<ul class="side-dropdown">
-					<li><a href="#">Basic</a></li>
-					<li><a href="#">Select</a></li>
-					<li><a href="#">Checkbox</a></li>
-					<li><a href="#">Radio</a></li>
-				</ul>
-			</li> -->
             </ul>
-            <%--<div class="ads">
-                <div class="wrapper">
-                    <a href="#" class="btn-upgrade">Upgrade</a>
-                    <p>Become a <span>PRO</span> member and enjoy <span>All Features</span></p>
-                </div>
-            </div>--%>
         </section>
         <!-- SIDEBAR -->
 
@@ -93,9 +67,7 @@
                     <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
                     <ul class="profile-link">
                         <li><a href="#"><i class='bx bxs-user-circle icon'></i>Profile</a></li>
-                        <%--<li><a href="#"><i class='bx bxs-cog'></i>Settings</a></li>
-                        <li><a href="#"><i class='bx bxs-log-out-circle'></i>Logout</a></li>
-                    --%></ul>
+                       </ul>
                 </div>
             </nav>
        <%-- </section>--%>

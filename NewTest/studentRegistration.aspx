@@ -2,6 +2,18 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="CSS/main.css" rel="stylesheet" />
+    <style type="text/css">
+        .btn {
+            background: linear-gradient(#D0E4FF,#1775F1,#0C5FCD);
+            color: #fff;
+            padding: 7px 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            cursor: pointer;
+            align-items: end;
+            float: right;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
@@ -17,10 +29,6 @@
                     </div>
                     <div class="input-box">
                         <span class="details">Registration Type</span>
-                        <%--<select class="type1">
-                            <option value="student">Student</option>
-                            <option value="teacher">Teacher</option>
-                        </select>--%>
                         <asp:DropDownList ID="registertypeTextbox" runat="server" CssClass="type1">
                             <asp:ListItem>Student</asp:ListItem>
                             <asp:ListItem>Teacher</asp:ListItem>
@@ -56,28 +64,10 @@
                             <asp:ListItem Value="other">Other</asp:ListItem>
                         </asp:DropDownList>
                     </div>
-                    <%--<div class="gender-details">
-                        <span class="gender-title">Gender</span>
-                        <asp:DropDownList ID="genderDropDownList" runat="server" AutoPostBack="True" CssClass="type1">
-                            <asp:ListItem>Student</asp:ListItem>
-                            <asp:ListItem>Teacher</asp:ListItem>
-                        </asp:DropDownList>
-
-                    </div>--%>
                     <div class="input-box">
                         <span class="details">Qulification</span>
                         <asp:TextBox ID="QulificatioTextBox" runat="server"></asp:TextBox>
-                        <%--<asp:DropDownList ID="QulificationTextBox" runat="server" AutoPostBack="True" CssClass="type1">
-                            <asp:ListItem ID="BcaTextBox">BCA/Diploma in any stream from a recognized University or Institute.</asp:ListItem>
-                            <asp:ListItem ID="PGTextBox">PG/Any other post graduate degree from a recognized university or institute.</asp:ListItem>
-                            <asp:ListItem ID="Others">Others, please specify:_</asp:ListItem>
-                        </asp:DropDownList>--%>
                         <br />
-                        <%--<input type="text" id="others" style="display: none;" placeholder="Specify here" />--%>
-
-
-                        <!-- <input type="text" placeholder="Enter your name" required>
-             -->
                     </div>
                     <div class="input-box">
                         <span class="details">Profession</span>
@@ -127,23 +117,13 @@
                         <span class="details">School Register No</span>
                         <asp:TextBox ID="SchoolRegisternoTextBox" TextMode="Number" runat="server"></asp:TextBox>
                     </div>
-
-
-                    <%--<div class="input-box">
-                        <span class="details">Password</span>
-                        <input type="text" placeholder="Enter your password" required>
-                    </div>
-                    <div class="input-box">
-                        <span class="details">Confirm Password</span>
-                        <input type="text" placeholder="Confirm your password" required>
-                    </div>--%>
                 </div>
 
                 <div class="button">
                     <asp:Button ID="RegisterButton" runat="server" Text="Register" OnClick="RegisterButton_Click" />
-                    <%--<input type="submit" value="Register">--%>
                 </div>
-                <label style="align-items: center;">Already have an account ? <a href="#"></a>login here</label>
+                <asp:Button ID="backbtn" Text="Back" runat="server" CssClass="btn" OnClick="backbtn_Click"/>
+                <label style="align-items: center;">Already have an account ? <a href="#">login here</a></label>
             </form>
         </div>
     </div>

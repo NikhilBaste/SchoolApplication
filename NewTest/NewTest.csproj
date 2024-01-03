@@ -95,6 +95,7 @@
     <Content Include="JS\Script.js" />
     <Content Include="JS\sim1.js" />
     <Content Include="Message.aspx" />
+    <Content Include="RegistrationForm.aspx" />
     <Content Include="School_Registration.aspx" />
     <Content Include="service.aspx" />
     <Content Include="studentRegistration.aspx" />
@@ -151,6 +152,13 @@
       <DependentUpon>Message.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationForm.aspx.cs">
+      <DependentUpon>RegistrationForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrationForm.aspx.designer.cs">
+      <DependentUpon>RegistrationForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="School_Registration.aspx.cs">
       <DependentUpon>School_Registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
